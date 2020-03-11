@@ -17,7 +17,7 @@ Follow the instructions line-by-line.
 Write the command you used to do this below.
 ----------
 
-
+nano temp.txt
 
 ==========
 3. Open another terminal
@@ -29,13 +29,17 @@ Write the command you used to do this below.
 
 Write the command that you used to do this, and the last two lines of output.
 ----------
+ps aux
 
-
+student           7932   0.0  0.1  4368940  49532   ??  S     8:04PM   0:00.19 /System/Library/ temp
 ==========
 4. Run the same command, but look for a specific process.  (It's the version of the command that has | grep ...).  Look for the program that you started to edit a file, nano.
 
 Write the command that you used to do this, and all of the output.
 ----------
+ ps aux | grep -i temp.txt
+student           8044   0.0  0.0  4304896   2224 s000  S+    8:11PM   0:00.03 nano temp.txt
+student           8219   0.0  0.0  4277008    876 s001  S+    8:19PM   0:00.00 grep -i temp.txt
 
 
 ==========
@@ -48,6 +52,7 @@ Write the command that you used to do this, and all of the output.
 6. Go to your other terminal window.  What happened to nano?  What was the message on the screen?
 
 ----------
+it closed
 
 
 ==========
@@ -67,36 +72,38 @@ Quit and save when you're done.
 
 What command did you use to do this?
 ----------
-
-
+nano hello.sh
 ==========
 9. Change the permissions (modify) on hello.sh so that the *user* (u) can *execute* (x) it: 
 
 Write the commands that you used to do this below.
 ----------
 
-
+chomd u+x 
 ==========
 10. Run your script (hello.sh).
 
 How did you do this?  What was the output?
 ----------
+./hello.sh
 
-
+hi there!
 ==========
 11. Change to the root directory.  Try running your script again (hello.sh).  What was the output (if there's an error, write it out)?
 ----------
+-bash: ./hello.sh: No such file or directory
 
 
 ==========
 12. Now trying using the full, absolute path to your script (that is, starting with /...).  What did you write in?  What did it do?
 ----------
-
+ /Users/student/hello.sh
+hi there
 
 ==========
 13.  Go back to the directory that your hello.sh script was in.  What command did you use to change to this directory? 
 ----------
-
+cd ~
 
 ==========
 14. Type in the following command:
@@ -105,6 +112,7 @@ echo $PATH
 
 Write down the output of this command
 ----------
+/opt/local/bin:/Applications/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/mysql/bin/
 
 
 ==========
@@ -114,6 +122,9 @@ env
 
 Write down the last two lines of output for this command
 ----------
+DISPLAY=/private/tmp/com.apple.launchd.DsXA5e7lIr/org.macosforge.xquartz:0
+_=/usr/bin/env
+OLDPWD=/
 
 
 ==========
@@ -127,6 +138,7 @@ echo $PATH
 
 Write down the output of the last command.  It should include your home folder.
 ----------
+Mono.framework/Versions/Current/Commands:/usr/local/mysql/bin/:/Users/professor:/Users/professor
 
 
 ==========
@@ -138,7 +150,7 @@ hello.sh
 
 It should work now!  What is the output?
 ----------
-
+Mono.framework/Versions/Current/Commands:/usr/local/mysql/bin/:/Users/professor
 
 ==========
 18.  Save this file in the repository that you created from parts 1 and 2.
